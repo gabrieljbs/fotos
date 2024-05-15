@@ -1,0 +1,13 @@
+<mat-card class="card">
+  @if (isLoading) {
+    <mat-spinner></mat-spinner>
+  }
+  @if (!isLoading) {
+    <img mat-card-image src="" [src]="imageSrc" alt="Photo">
+  }
+  <mat-card-actions>
+    <input id="file-upload" name="file-upload" type="file" (change)="handleEvent($event)">
+    <button mat-flat-button (click)="addPhoto()" color="primary">Adicionar</button>
+    <button mat-stroked-button (click)="savePhoto()" color="basic" [disabled]="!btn">Salvar</button>
+  </mat-card-actions>
+</mat-card>

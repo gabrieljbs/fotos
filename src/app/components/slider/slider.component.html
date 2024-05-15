@@ -1,0 +1,12 @@
+@if (isLoading) {
+  <mat-spinner></mat-spinner>
+}
+@if (!isLoading) {
+  <swiper-container class="swiper-container" pagination="true" slides-Per-View="1" slides-Per-View="auto" autoplay="true" loop="true" >
+    @for (item of slideUrls; track $index) {
+    <swiper-slide class="swiper-slide" lazy="false">
+      <img [src]=item.url [alt]=item.name>
+    </swiper-slide>
+  }
+  </swiper-container>  
+}

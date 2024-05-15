@@ -1,0 +1,28 @@
+.card {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px 0px black;
+}
+
+img{
+    margin: auto;
+    width: 90%;
+    height: 80%;
+    size: 100%;
+    border-radius: 12px;
+    border: solid 1px #000;
+    margin-top: 1rem;
+}
+
+button{
+    margin-left: 1rem;
+}
+input{
+    display: none;
+}
+mat-spinner{
+    margin: auto;
+}

@@ -1,0 +1,13 @@
+  <div class="content">
+    @if (isLoading) {
+      <mat-spinner></mat-spinner>
+    }
+    @for (photo of imagesUrl; track $index) {
+      <mat-card>
+        <img mat-card-image [src]=photo.url [alt]=photo.name>
+        <mat-card-actions>
+          <button mat-button color="warn" (click)="delete(photo.name)">DELETAR</button>
+        </mat-card-actions>
+      </mat-card>
+    }
+  </div>
