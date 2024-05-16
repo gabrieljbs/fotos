@@ -8,10 +8,19 @@ import {
   deleteObject,
 } from '@angular/fire/storage';
 
+import { Subject } from 'rxjs';
+
 @Injectable({
   providedIn: 'root',
 })
 export class PhotosService {
+  private photoUpdatedSource = new Subject<void>();
+  photoUpdated$ = this.photoUpdatedSource.asObservable();
+  
+  updatePhotos() {
+    this.photoUpdatedSource.next();
+  }
+
   constructor(private storage: Storage) {}
 
   async uploadPhoto(file: any) {

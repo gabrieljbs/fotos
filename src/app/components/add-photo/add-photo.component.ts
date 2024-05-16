@@ -43,6 +43,7 @@ export class AddPhotoComponent {
     this.photoService.uploadPhoto(this.img);
     this.btn = false;
     this.imageSrc = './../../../assets/photo.png'
+    this.photoService.updatePhotos()
   }
 }
 
